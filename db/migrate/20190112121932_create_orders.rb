@@ -1,10 +1,10 @@
 class CreateOrders < ActiveRecord::Migration[5.2]
   def change
     create_table :orders do |t|
-      t.Integer :orderId
+      t.integer :orderId
       t.date :date
-      t.Integer :userID
-      t.Integer :sumTotal
+      t.integer :userID
+      t.integer :sumTotal
       t.date :estDelivery
       t.string :hasItems
 

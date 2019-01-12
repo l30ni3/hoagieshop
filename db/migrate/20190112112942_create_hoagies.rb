@@ -1,7 +1,7 @@
 class CreateHoagies < ActiveRecord::Migration[5.2]
   def change
     create_table :hoagies do |t|
-      t.Integer :hoagieID
+      t.integer :hoagieID
       t.string :bread
       t.string :main1
       t.string :main2
@@ -14,7 +14,7 @@ class CreateHoagies < ActiveRecord::Migration[5.2]
       t.string :sauce2
       t.date :created
       t.string :user
-      t.Integer :orderID
+      t.integer :orderID
 
       t.timestamps
     end

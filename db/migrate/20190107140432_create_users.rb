@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :surName
       t.string :adr
       t.string :payMethod
-      t.integer :ID
+      t.integer :userID
       t.string :role
 
       t.timestamps
