@@ -1,0 +1,27 @@
+<%= form_with(model: veggy, local: true) do |form| %>
+  <% if veggy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(veggy.errors.count, "error") %> prohibited this veggy from being saved:</h2>
+
+      <ul>
+      <% veggy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :vID %>
+    <%= form.text_field :vID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vName %>
+    <%= form.text_field :vName %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

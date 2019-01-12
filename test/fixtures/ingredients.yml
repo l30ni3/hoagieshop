@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IDIngred: MyString
+  name: MyString
+  description: MyString
+  price: 
+  type: 
+
+two:
+  IDIngred: MyString
+  name: MyString
+  description: MyString
+  price: 
+  type: 

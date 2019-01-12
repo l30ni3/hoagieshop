@@ -1,0 +1,2 @@
+class Hoagie < ApplicationRecord
+end

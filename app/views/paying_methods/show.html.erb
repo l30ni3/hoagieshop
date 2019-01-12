@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @paying_method.provider %>
+</p>
+
+<%= link_to 'Edit', edit_paying_method_path(@paying_method) %> |
+<%= link_to 'Back', paying_methods_path %>

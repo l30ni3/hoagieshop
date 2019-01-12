@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sid:</strong>
+  <%= @sauce.sID %>
+</p>
+
+<p>
+  <strong>Sname:</strong>
+  <%= @sauce.sName %>
+</p>
+
+<%= link_to 'Edit', edit_sauce_path(@sauce) %> |
+<%= link_to 'Back', sauces_path %>

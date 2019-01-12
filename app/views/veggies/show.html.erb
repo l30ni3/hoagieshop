@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vid:</strong>
+  <%= @veggy.vID %>
+</p>
+
+<p>
+  <strong>Vname:</strong>
+  <%= @veggy.vName %>
+</p>
+
+<%= link_to 'Edit', edit_veggy_path(@veggy) %> |
+<%= link_to 'Back', veggies_path %>

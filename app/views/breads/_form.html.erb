@@ -1,0 +1,32 @@
+<%= form_with(model: bread, local: true) do |form| %>
+  <% if bread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bread.errors.count, "error") %> prohibited this bread from being saved:</h2>
+
+      <ul>
+      <% bread.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bID %>
+    <%= form.text_field :bID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bType %>
+    <%= form.text_field :bType %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bName %>
+    <%= form.text_field :bName %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

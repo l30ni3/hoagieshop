@@ -1,0 +1,87 @@
+<%= form_with(model: hoagy, local: true) do |form| %>
+  <% if hoagy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hoagy.errors.count, "error") %> prohibited this hoagy from being saved:</h2>
+
+      <ul>
+      <% hoagy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hoagieID %>
+    <%= form.text_field :hoagieID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bread %>
+    <%= form.text_field :bread %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main1 %>
+    <%= form.text_field :main1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main2 %>
+    <%= form.text_field :main2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veggies1 %>
+    <%= form.text_field :veggies1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veggies2 %>
+    <%= form.text_field :veggies2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veggies3 %>
+    <%= form.text_field :veggies3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veggies4 %>
+    <%= form.text_field :veggies4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veggies5 %>
+    <%= form.text_field :veggies5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sauce1 %>
+    <%= form.text_field :sauce1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sauce2 %>
+    <%= form.text_field :sauce2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created %>
+    <%= form.date_select :created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :orderID %>
+    <%= form.text_field :orderID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

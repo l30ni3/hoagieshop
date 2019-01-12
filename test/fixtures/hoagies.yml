@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hoagieID: 
+  bread: MyString
+  main1: MyString
+  main2: MyString
+  veggies1: MyString
+  veggies2: MyString
+  veggies3: MyString
+  veggies4: MyString
+  veggies5: MyString
+  sauce1: MyString
+  sauce2: MyString
+  created: 2019-01-12
+  user: MyString
+  orderID: 
+
+two:
+  hoagieID: 
+  bread: MyString
+  main1: MyString
+  main2: MyString
+  veggies1: MyString
+  veggies2: MyString
+  veggies3: MyString
+  veggies4: MyString
+  veggies5: MyString
+  sauce1: MyString
+  sauce2: MyString
+  created: 2019-01-12
+  user: MyString
+  orderID: 

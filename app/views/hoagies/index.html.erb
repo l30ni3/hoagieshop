@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hoagies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hoagieid</th>
+      <th>Bread</th>
+      <th>Main1</th>
+      <th>Main2</th>
+      <th>Veggies1</th>
+      <th>Veggies2</th>
+      <th>Veggies3</th>
+      <th>Veggies4</th>
+      <th>Veggies5</th>
+      <th>Sauce1</th>
+      <th>Sauce2</th>
+      <th>Created</th>
+      <th>User</th>
+      <th>Orderid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hoagies.each do |hoagy| %>
+      <tr>
+        <td><%= hoagy.hoagieID %></td>
+        <td><%= hoagy.bread %></td>
+        <td><%= hoagy.main1 %></td>
+        <td><%= hoagy.main2 %></td>
+        <td><%= hoagy.veggies1 %></td>
+        <td><%= hoagy.veggies2 %></td>
+        <td><%= hoagy.veggies3 %></td>
+        <td><%= hoagy.veggies4 %></td>
+        <td><%= hoagy.veggies5 %></td>
+        <td><%= hoagy.sauce1 %></td>
+        <td><%= hoagy.sauce2 %></td>
+        <td><%= hoagy.created %></td>
+        <td><%= hoagy.user %></td>
+        <td><%= hoagy.orderID %></td>
+        <td><%= link_to 'Show', hoagy %></td>
+        <td><%= link_to 'Edit', edit_hoagy_path(hoagy) %></td>
+        <td><%= link_to 'Destroy', hoagy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hoagy', new_hoagy_path %>
