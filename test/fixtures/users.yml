@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  surName: MyString
+  adr: MyString
+  payMethod: MyString
+  ID: 1
+  role: MyString
+
+two:
+  name: MyString
+  surName: MyString
+  adr: MyString
+  payMethod: MyString
+  ID: 1
+  role: MyString
