@@ -17,3 +17,8 @@ module Hoagieshop
     # the framework and any gems in your application.
   end
 end
+
+# config.generators do |g|
+#   g.test_framework   :rspec, :fixture => true, :views => false
+#   g.integration_tool :rspec, :fixture => true, :views => true
+# end
