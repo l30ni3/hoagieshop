@@ -23,19 +23,24 @@ class HoagiesController < ApplicationController
 
   # POST /hoagies
   # POST /hoagies.json
-  def create
-    @hoagy = Hoagie.new(hoagy_params)
+  # def create
+  #   @hoagy = Hoagie.new(hoagy_params)
+  #
+  #   respond_to do |format|
+  #     if @hoagy.save
+  #       format.html { redirect_to @hoagy, notice: 'Hoagie was successfully created.' }
+  #       format.json { render :show, status: :created, location: @hoagy }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @hoagy.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
-    respond_to do |format|
-      if @hoagy.save
-        format.html { redirect_to @hoagy, notice: 'Hoagie was successfully created.' }
-        format.json { render :show, status: :created, location: @hoagy }
-      else
-        format.html { render :new }
-        format.json { render json: @hoagy.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+
+def create
+  render plain: params[:hoagie].inspect
+end
 
   # PATCH/PUT /hoagies/1
   # PATCH/PUT /hoagies/1.json
