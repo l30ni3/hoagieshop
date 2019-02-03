@@ -6,6 +6,6 @@
 
 <p><%= @post.body %></p>
 
-<p><%= link_to 'Edit', edit_post_path(@post) %></p>
+<p><%= link_to '<button type="button">Edit</button>'.html_safe, edit_post_path(@post) %></p>
 
-<%= link_to 'Back', root_path %>
+<%= link_to '<button type="button">Back</button>'.html_safe, root_path %>

@@ -1,7 +1,7 @@
-<%= link_to 'See all created Hoagies', controller: 'hoagies' %>
+<%= link_to '<button type="button">See all</button>'.html_safe, controller: 'hoagies' %>
 
 <h1>Create your Hoagy:</h1>
 
 <%= render 'form', hoagy: @hoagy %>
 
-<%= link_to 'Back', root_path %>
+<%= link_to '<button type="button">Back</button>'.html_safe, root_path %>

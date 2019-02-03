@@ -1,7 +1,15 @@
 
 <h1>Welcome to the Hoagieshop!</h1>
 
-<%= link_to 'See all Hoagies', controller: 'hoagies' %>
-<%= link_to 'Create your Hoagie', new_hoagy_path %>
-<%= link_to 'Reviews', controller: 'posts' %>
-<%= link_to 'Create Review', new_post_path %>
+<p class="homepage-text">It's the food you love, delivered. <br>
+  It's all at your fingertips. Find the right hoagie to suit your mood, and make the first bite last.<br>
+  <br>
+
+  Go ahead, create your first hoagie or leave a review.</p>
+
+
+<div class="homepage-buttons">
+<%= link_to '<button type="button">Create your Hoagie</button>'.html_safe, new_hoagy_path %>
+<%= link_to '<button type="button">Reviews</button>'.html_safe, controller: 'posts' %>
+
+</div>

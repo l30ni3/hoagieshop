@@ -40,9 +40,9 @@
         <td><%= hoagy.created %></td>
         <td><%= hoagy.user %></td>
         <td><%= hoagy.orderID %></td>
-        <td><%= link_to 'Show', hoagy %></td>
-        <td><%= link_to 'Edit', edit_hoagy_path(hoagy) %></td>
-        <td><%= link_to 'Destroy', hoagy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<button type="button">Show</button>'.html_safe, hoagy %></td>
+        <td><%= link_to '<button type="button">Edit</button>'.html_safe, edit_hoagy_path(hoagy) %></td>
+        <td><%= link_to '<button type="button">Destroy</button>'.html_safe, hoagy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,4 +50,4 @@
 
 <br>
 
-<%= link_to 'New Hoagy', new_hoagy_path %>
+<%= link_to '<button type="button">New Hoagie</button>'.html_safe, new_hoagy_path %>
