@@ -8,7 +8,9 @@ ruby '2.3.7'
 gem 'rspec'
 gem 'rubocop', require: false
 gem 'rubocop-rspec'
+gem 'carrierwave', '~> 1.0'
 gem 'formtastic', '~> 3.0'
+gem 'mini_magick'
 
 gem 'geokit'
 gem 'nokogiri'

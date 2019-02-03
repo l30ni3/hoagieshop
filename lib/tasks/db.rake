@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'factory_girl'
+
 # usage:
 # rake db:populate
 # rake db:populate["Customer"]

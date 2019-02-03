@@ -2,7 +2,7 @@
 
 <p>
   <strong>Hoagieid:</strong>
-  <%= @hoagy.hoagieID %>
+  <%= @hoagy.id %>
 </p>
 
 <p>
@@ -55,20 +55,16 @@
   <%= @hoagy.sauce2 %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Created:</strong>
   <%= @hoagy.created %>
-</p>
+</p> -->
 
-<p>
+<!-- <p>
   <strong>User:</strong>
   <%= @hoagy.user %>
-</p>
+</p> -->
 
-<p>
-  <strong>Orderid:</strong>
-  <%= @hoagy.orderID %>
-</p>
 
 <%= link_to 'Edit', edit_hoagy_path(@hoagy) %> |
 <%= link_to 'Back', hoagies_path %>

@@ -18,6 +18,7 @@ class HoagiesController < ApplicationController
   # GET /hoagies/new
   def new
     @hoagy = Hoagie.new
+    # @hoagy.save
   end
 
   # GET /hoagies/1/edit
@@ -27,6 +28,7 @@ class HoagiesController < ApplicationController
   # POST /hoagies.json
   def create
     @hoagy = Hoagie.new(hoagy_params)
+    # @hoagy.save
 
     respond_to do |format|
       if @hoagy.save
@@ -72,6 +74,6 @@ class HoagiesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def hoagy_params
-    params.require(:hoagy).permit(:hoagieID, :bread, :main1, :main2, :veggies1, :veggies2, :veggies3, :veggies4, :veggies5, :sauce1, :sauce2, :created, :user, :orderID)
+    params.require(:hoagies).permit(:hoagieID, :bread, :main1, :main2, :veggies1, :veggies2, :veggies3, :veggies4, :veggies5, :sauce1, :sauce2, :created, :user, :orderID)
     end
 end

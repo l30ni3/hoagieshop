@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'hoagies/new'
-  root 'hoagies#new'
+  get 'welcome/index'
+  root 'welcome#index'
   # get 'welcome/index'
   # root 'welcome#index'
 
@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :ingredients
   resources :users
   resources :user1s
+  resources :posts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

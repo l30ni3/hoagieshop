@@ -1,4 +1,4 @@
-<%= form_with(model: hoagy, local: true) do |form| %>
+<!-- <%= form_with(model: hoagy, local: true) do |form| %>
   <% if hoagy.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(hoagy.errors.count, "error") %> prohibited this hoagy from being saved:</h2>
@@ -84,4 +84,41 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %> -->
+
+<%= form_with scope: :hoagies, url: hoagies_path, local: true do |form| %>
+  <p>
+    <%= form.label :bread %><br>
+    <%= form.select :bread, [['White bread','white bread'],['Full grain','full grain'],['Rye','rye']] %>
+  </p>
+
+  <p>
+    <%= form.label :bread %><br>
+    <%= form.select :bread, [['White bread','white bread'],['Full grain','full grain'],['Rye','rye']] %>
+  </p>
+
+  <p>
+    <%= form.label :main, 'Main Ingredients:' %><br>
+    <%= form.select :main1, [['Turkey','turkey'],['Beef','beef'],['Chicken','chicken'],['Cheese','cheese'],['Tuna','tuna'],['Pulled pork','pulled pork'],['Tofu','tofu']] %>
+    <%= form.select :main2, [['-','-'],['Turkey','turkey'],['Beef','beef'],['Chicken','chicken'],['Cheese','cheese'],['Tuna','tuna'],['Pulled pork','pulled pork'],['Tofu','tofu']] %>
+  </p>
+
+  <p>
+    <%= form.label :veggies, 'Choose your veggies:' %><br>
+    <%= form.select :veggies1, [['Salad','salad'],['Tomatoes','tomatoes'],['Onions','onions'],['Pickles','pickles'],['Jalapenos','jalapenos'],['Corn','corn']] %>
+    <%= form.select :veggies2, [['-','-'],['Salad','salad'],['Tomatoes','tomatoes'],['Onions','onions'],['Pickles','pickles'],['Jalapenos','jalapenos'],['Corn','corn']] %>
+    <%= form.select :veggies3, [['-','-'],['Salad','salad'],['Tomatoes','tomatoes'],['Onions','onions'],['Pickles','pickles'],['Jalapenos','jalapenos'],['Corn','corn']] %>
+    <%= form.select :veggies4, [['-','-'],['Salad','salad'],['Tomatoes','tomatoes'],['Onions','onions'],['Pickles','pickles'],['Jalapenos','jalapenos'],['Corn','corn']] %>
+    <%= form.select :veggies5, [['-','-'],['Salad','salad'],['Tomatoes','tomatoes'],['Onions','onions'],['Pickles','pickles'],['Jalapenos','jalapenos'],['Corn','corn']] %>
+  </p>
+
+  <p>
+    <%= form.label :sauces, 'Choose your sauces:' %><br>
+    <%= form.select :sauce1, [['Garlic','garlic'],['Herbs','herbs'],['Ketchup','ketchup']] %>
+    <%= form.select :sauce2, [['-','-'],['Garlic','garlic'],['Herbs','herbs'],['Ketchup','ketchup']] %>
+  </p>
+
+
+    <%= form.submit %>
+  </p>
 <% end %>
