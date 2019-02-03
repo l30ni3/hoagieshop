@@ -11,7 +11,9 @@ class HoagiesController < ApplicationController
 
   # GET /hoagies/1
   # GET /hoagies/1.json
-  def show; end
+  def show;
+    @hoagy = Hoagie.find(params[:id])
+  end
 
   # GET /hoagies/new
   def new
@@ -23,24 +25,19 @@ class HoagiesController < ApplicationController
 
   # POST /hoagies
   # POST /hoagies.json
-  # def create
-  #   @hoagy = Hoagie.new(hoagy_params)
-  #
-  #   respond_to do |format|
-  #     if @hoagy.save
-  #       format.html { redirect_to @hoagy, notice: 'Hoagie was successfully created.' }
-  #       format.json { render :show, status: :created, location: @hoagy }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @hoagy.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def create
+    @hoagy = Hoagie.new(hoagy_params)
 
-
-def create
-  render plain: params[:hoagie].inspect
-end
+    respond_to do |format|
+      if @hoagy.save
+        format.html { redirect_to @hoagy, notice: 'Hoagie was successfully created.' }
+        format.json { render :show, status: :created, location: @hoagy }
+      else
+        format.html { render :new }
+        format.json { render json: @hoagy.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /hoagies/1
   # PATCH/PUT /hoagies/1.json
@@ -76,5 +73,5 @@ end
   # Never trust parameters from the scary internet, only allow the white list through.
   def hoagy_params
     params.require(:hoagy).permit(:hoagieID, :bread, :main1, :main2, :veggies1, :veggies2, :veggies3, :veggies4, :veggies5, :sauce1, :sauce2, :created, :user, :orderID)
-  end
+    end
 end
