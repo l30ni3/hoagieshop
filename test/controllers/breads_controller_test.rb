@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BreadsControllerTest < ActionDispatch::IntegrationTest
@@ -5,17 +7,17 @@ class BreadsControllerTest < ActionDispatch::IntegrationTest
     @bread = breads(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get breads_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_bread_url
     assert_response :success
   end
 
-  test "should create bread" do
+  test 'should create bread' do
     assert_difference('Bread.count') do
       post breads_url, params: { bread: { bID: @bread.bID, bName: @bread.bName, bType: @bread.bType } }
     end
@@ -23,22 +25,22 @@ class BreadsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to bread_url(Bread.last)
   end
 
-  test "should show bread" do
+  test 'should show bread' do
     get bread_url(@bread)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_bread_url(@bread)
     assert_response :success
   end
 
-  test "should update bread" do
+  test 'should update bread' do
     patch bread_url(@bread), params: { bread: { bID: @bread.bID, bName: @bread.bName, bType: @bread.bType } }
     assert_redirected_to bread_url(@bread)
   end
 
-  test "should destroy bread" do
+  test 'should destroy bread' do
     assert_difference('Bread.count', -1) do
       delete bread_url(@bread)
     end

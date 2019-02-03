@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class MainsController < ApplicationController
-  before_action :set_main, only: [:show, :edit, :update, :destroy]
+  before_action :set_main, only: %i[show edit update destroy]
 
   # GET /mains
   # GET /mains.json
@@ -9,8 +11,7 @@ class MainsController < ApplicationController
 
   # GET /mains/1
   # GET /mains/1.json
-  def show
-  end
+  def show; end
 
   # GET /mains/new
   def new
@@ -18,8 +19,7 @@ class MainsController < ApplicationController
   end
 
   # GET /mains/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /mains
   # POST /mains.json
@@ -62,13 +62,14 @@ class MainsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_main
-      @main = Main.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def main_params
-      params.require(:main).permit(:mID, :mType, :mName)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_main
+    @main = Main.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def main_params
+    params.require(:main).permit(:mID, :mType, :mName)
+  end
 end

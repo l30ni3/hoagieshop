@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class MainsControllerTest < ActionDispatch::IntegrationTest
@@ -5,17 +7,17 @@ class MainsControllerTest < ActionDispatch::IntegrationTest
     @main = mains(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get mains_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_main_url
     assert_response :success
   end
 
-  test "should create main" do
+  test 'should create main' do
     assert_difference('Main.count') do
       post mains_url, params: { main: { mID: @main.mID, mName: @main.mName, mType: @main.mType } }
     end
@@ -23,22 +25,22 @@ class MainsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to main_url(Main.last)
   end
 
-  test "should show main" do
+  test 'should show main' do
     get main_url(@main)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_main_url(@main)
     assert_response :success
   end
 
-  test "should update main" do
+  test 'should update main' do
     patch main_url(@main), params: { main: { mID: @main.mID, mName: @main.mName, mType: @main.mType } }
     assert_redirected_to main_url(@main)
   end
 
-  test "should destroy main" do
+  test 'should destroy main' do
     assert_difference('Main.count', -1) do
       delete main_url(@main)
     end

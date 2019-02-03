@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class SaucesControllerTest < ActionDispatch::IntegrationTest
@@ -5,17 +7,17 @@ class SaucesControllerTest < ActionDispatch::IntegrationTest
     @sauce = sauces(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get sauces_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_sauce_url
     assert_response :success
   end
 
-  test "should create sauce" do
+  test 'should create sauce' do
     assert_difference('Sauce.count') do
       post sauces_url, params: { sauce: { sID: @sauce.sID, sName: @sauce.sName } }
     end
@@ -23,22 +25,22 @@ class SaucesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to sauce_url(Sauce.last)
   end
 
-  test "should show sauce" do
+  test 'should show sauce' do
     get sauce_url(@sauce)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_sauce_url(@sauce)
     assert_response :success
   end
 
-  test "should update sauce" do
+  test 'should update sauce' do
     patch sauce_url(@sauce), params: { sauce: { sID: @sauce.sID, sName: @sauce.sName } }
     assert_redirected_to sauce_url(@sauce)
   end
 
-  test "should destroy sauce" do
+  test 'should destroy sauce' do
     assert_difference('Sauce.count', -1) do
       delete sauce_url(@sauce)
     end

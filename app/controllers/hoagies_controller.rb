@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class HoagiesController < ApplicationController
-  before_action :set_hoagy, only: [:show, :edit, :update, :destroy]
+  before_action :set_hoagy, only: %i[show edit update destroy]
 
   # GET /hoagies
   # GET /hoagies.json
@@ -9,8 +11,7 @@ class HoagiesController < ApplicationController
 
   # GET /hoagies/1
   # GET /hoagies/1.json
-  def show
-  end
+  def show; end
 
   # GET /hoagies/new
   def new
@@ -18,8 +19,7 @@ class HoagiesController < ApplicationController
   end
 
   # GET /hoagies/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /hoagies
   # POST /hoagies.json
@@ -62,13 +62,14 @@ class HoagiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hoagy
-      @hoagy = Hoagie.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def hoagy_params
-      params.require(:hoagy).permit(:hoagieID, :bread, :main1, :main2, :veggies1, :veggies2, :veggies3, :veggies4, :veggies5, :sauce1, :sauce2, :created, :user, :orderID)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_hoagy
+    @hoagy = Hoagie.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def hoagy_params
+    params.require(:hoagy).permit(:hoagieID, :bread, :main1, :main2, :veggies1, :veggies2, :veggies3, :veggies4, :veggies5, :sauce1, :sauce2, :created, :user, :orderID)
+  end
 end

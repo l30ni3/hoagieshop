@@ -1,1 +1,3 @@
-json.partial! "adresses/adress", adress: @adress
+# frozen_string_literal: true
+
+json.partial! 'adresses/adress', adress: @adress

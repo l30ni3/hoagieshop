@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
-  validates :userID, uniqueness: true
-  validates :email, uniqueness: true
+  include FactoryBot::Syntax::Methods
+  validates_presence_of :userID
+  validates_presence_of :surName
+  validates_presence_of :name 
 end

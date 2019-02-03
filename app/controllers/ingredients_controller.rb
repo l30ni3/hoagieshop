@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:show, :edit, :update, :destroy]
+  before_action :set_ingredient, only: %i[show edit update destroy]
 
   # GET /ingredients
   # GET /ingredients.json
@@ -9,8 +11,7 @@ class IngredientsController < ApplicationController
 
   # GET /ingredients/1
   # GET /ingredients/1.json
-  def show
-  end
+  def show; end
 
   # GET /ingredients/new
   def new
@@ -18,8 +19,7 @@ class IngredientsController < ApplicationController
   end
 
   # GET /ingredients/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /ingredients
   # POST /ingredients.json
@@ -62,13 +62,14 @@ class IngredientsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ingredient
-      @ingredient = Ingredient.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def ingredient_params
-      params.require(:ingredient).permit(:IDIngred, :name, :description, :price, :type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ingredient
+    @ingredient = Ingredient.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def ingredient_params
+    params.require(:ingredient).permit(:IDIngred, :name, :description, :price, :type)
+  end
 end

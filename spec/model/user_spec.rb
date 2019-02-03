@@ -1,26 +1,29 @@
-require "rails_helper"
-RSpec.describe User, :type => :model do
+# frozen_string_literal: true
 
-  before(:all) do
-    @user1 = create(:user)
+require 'rails_helper'
+
+RSpec.describe User, type: :model do
+
+  # it 'is valid with valid attributes' do
+  #   expect(User.new).to be_valid
+  # end
+
+  it "should have valid factory" do
+    FactoryBot.build(:user).should be_valid
+end
+
+  it 'is not valid without a userID' do
+    user = build(:user, userID: nil)
+    expect(user).to_not be_valid
   end
 
-  it "is valid with valid attributes" do
-    expect(@user1).to be_valid
+  it 'is not valid without a name' do
+    user = build(:user, name: nil)
+    expect(user).to_not be_valid
   end
 
-  it "has a unique email" do
-    user2 = build(:user, username: "Bob")
-    expect(user2).to_not be_valid
-  end
-
-  it "is not valid without a userID" do
-    user2 = build(:user, userID: nil)
-    expect(user2).to_not be_valid
-  end
-
-  it "is not valid without an email" do
-    user2 = build(:user, email: nil)
-    expect(user2).to_not be_valid
+  it 'is not valid without a surName' do
+    user = build(:user, surName: nil)
+    expect(user).to_not be_valid
   end
 end

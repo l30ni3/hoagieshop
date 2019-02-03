@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class AdressesController < ApplicationController
-  before_action :set_adress, only: [:show, :edit, :update, :destroy]
+  before_action :set_adress, only: %i[show edit update destroy]
 
   # GET /adresses
   # GET /adresses.json
@@ -9,8 +11,7 @@ class AdressesController < ApplicationController
 
   # GET /adresses/1
   # GET /adresses/1.json
-  def show
-  end
+  def show; end
 
   # GET /adresses/new
   def new
@@ -18,8 +19,7 @@ class AdressesController < ApplicationController
   end
 
   # GET /adresses/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /adresses
   # POST /adresses.json
@@ -62,13 +62,14 @@ class AdressesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_adress
-      @adress = Adress.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def adress_params
-      params.require(:adress).permit(:street, :number, :postalCode, :city, :email, :phone, :isBillingAdress)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_adress
+    @adress = Adress.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def adress_params
+    params.require(:adress).permit(:street, :number, :postalCode, :city, :email, :phone, :isBillingAdress)
+  end
 end

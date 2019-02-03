@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PayingMethodsController < ApplicationController
-  before_action :set_paying_method, only: [:show, :edit, :update, :destroy]
+  before_action :set_paying_method, only: %i[show edit update destroy]
 
   # GET /paying_methods
   # GET /paying_methods.json
@@ -9,8 +11,7 @@ class PayingMethodsController < ApplicationController
 
   # GET /paying_methods/1
   # GET /paying_methods/1.json
-  def show
-  end
+  def show; end
 
   # GET /paying_methods/new
   def new
@@ -18,8 +19,7 @@ class PayingMethodsController < ApplicationController
   end
 
   # GET /paying_methods/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /paying_methods
   # POST /paying_methods.json
@@ -62,13 +62,14 @@ class PayingMethodsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_paying_method
-      @paying_method = PayingMethod.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def paying_method_params
-      params.require(:paying_method).permit(:provider)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_paying_method
+    @paying_method = PayingMethod.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def paying_method_params
+    params.require(:paying_method).permit(:provider)
+  end
 end
