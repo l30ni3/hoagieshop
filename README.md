@@ -1,4 +1,3 @@
 # README
 
-Simple Webshop logic
-Database filled with test data using factory bot and RSpec
+#Simple Webshop logic with test data using Factory Bot and RSpec
